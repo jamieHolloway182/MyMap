@@ -24,6 +24,7 @@ function fetchData() {
     }else{
         data = obj;
         fetched = true;
+        return;
         console.log("online")
     }
 }
