@@ -22,10 +22,12 @@ function fetchData() {
                 console.error('Error fetching data:', error);
             });
     }else{
-        data = obj;
-        fetched = true;
-        return;
-        console.log("online")
+        return new Promise((resolve) => {
+            data = obj;
+            fetched = true;
+            console.log("online");
+            resolve(); // Resolve the promise
+        });
     }
 }
 
