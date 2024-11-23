@@ -1,0 +1,56 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet KMZ</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="submitForm.css" />
+    <link rel="stylesheet" href="markerTab.css" />
+
+    
+    <!-- Leaflet Fullscreen Plugin CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen/dist/leaflet.fullscreen.css" />
+
+    <!-- JS Libraries -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+    <script src="https://unpkg.com/leaflet-omnivore/leaflet-omnivore.min.js"></script>
+    <script src="https://unpkg.com/leaflet.fullscreen/dist/leaflet.fullscreen.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <div id="submitForm">
+        <div id="closeButton">&times;</div>
+        <div id="dropZone" class="dropZone">
+            <p>Drag and drop your images here, or click to upload.</p>
+            <input type="file" id="fileInput" accept="image/*" multiple hidden>
+        </div>
+        <div id="previewArea" class="previewArea"></div>
+        <textarea id="textInput" placeholder="Type your message here..."></textarea>
+        <button id="submitButton">Submit</button>
+    </div>
+    
+    <div id="markerTab">
+    <div id="markerImageContainer">
+        <button id="imageLeft">🡸</button>
+        <img src="" id="markerImage" alt="Marker Image">
+        <button id="imageRight" >🡺</button>
+    </div>
+    <div id="markerTextContainer">
+        <div id="markerText"></div>
+    </div>
+</div>
+
+    <script src="util.js"></script>
+    <script src="image.js"></script>
+    <script src="ui.js"></script>
+    <script src="main.js"></script>
+    <script src="kmz.js"></script>
+
+</body>
+</html>

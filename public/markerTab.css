@@ -1,0 +1,67 @@
+body{
+    margin: 0px;
+}
+
+#map { 
+    height: 100vh;
+    width: 100%; 
+    z-index: 0;
+}
+
+#markerTextContainer {
+    height: 100%;
+    text-align: left;
+    position: relative;      /* Positioning context for child elements */
+}
+
+#markerText {
+    padding-bottom: 1%;
+}
+
+#markerImageContainer {
+    display: flex;                 /* Position buttons and image side by side */
+    justify-content: space-between; /* Space out the buttons and image */
+    align-items: center;           /* Vertically center the buttons and image */
+    width: 100%;                   /* Ensure container takes up full width */
+    max-width: 1000px;             /* Optional: set a max width for the container */
+    padding: 10px;                 /* Add some padding for spacing */
+    box-sizing: border-box;        /* Include padding in the total width */
+}
+
+/* Image inside the container */
+#markerImage {
+    height: 40vh;                 /* Set a fixed height for the image */
+    width: auto;                  /* Adjust width based on height to maintain aspect ratio */
+    object-fit: contain;          /* Ensure the image scales without distortion */
+    overflow: hidden;
+    max-width: calc(100% - 100px); /* Make sure the image doesn't exceed container width minus the button width */
+    cursor: pointer;
+}
+
+/* Button styling */
+#imageLeft, #imageRight {
+    padding: 5px;
+    background-color: #ccc;
+    border: 1px solid #888;
+    cursor: pointer;
+    font-size: 16px;
+    flex-shrink: 0;                /* Prevent buttons from shrinking */
+    max-width: 50px;               /* Set max width for buttons */
+}
+
+/* Main container for the layout */
+#markerTab {
+    padding: 0% 1% 0% 1%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0%;
+    right: 0%;
+    width: 35%;
+    height: 100vh;
+    background-color: #ffffff;
+    border-left: 1px solid #000000;
+    align-items: center;
+    z-index: -1;
+    overflow-y: auto;              /* Hide anything that overflows vertically */
+}
